@@ -1,4 +1,5 @@
 import BMICalculator from '@/components/BMICalculator'
+import AdSense from '@/components/AdSense'
 
 export default function Home() {
   return (
@@ -8,7 +9,17 @@ export default function Home() {
           BMI Calculator - Body Mass Index
         </h1>
         
+        {/* Top Ad */}
+        <div className="max-w-4xl mx-auto mb-6">
+          <AdSense slot="top-banner" format="horizontal" />
+        </div>
+        
         <BMICalculator />
+        
+        {/* Middle Ad */}
+        <div className="max-w-4xl mx-auto my-8">
+          <AdSense slot="mid-content" format="rectangle" />
+        </div>
         
         {/* SEO Content */}
         <div className="max-w-4xl mx-auto mt-12 space-y-6">
@@ -54,6 +65,11 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          {/* Bottom Ad */}
+          <div className="my-8">
+            <AdSense slot="bottom-content" format="rectangle" />
+          </div>
 
           <section className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-2xl font-semibold mb-4">Limitations of BMI</h2>

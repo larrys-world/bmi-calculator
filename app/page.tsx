@@ -1,5 +1,6 @@
 import BMICalculator from '@/components/BMICalculator'
 import AdSense from '@/components/AdSense'
+import RelatedTools from './RelatedTools'
 
 export default function Home() {
   return (
@@ -19,6 +20,11 @@ export default function Home() {
         {/* Middle Ad */}
         <div className="max-w-4xl mx-auto my-8">
           <AdSense slot="mid-content" format="rectangle" />
+        </div>
+        
+        {/* Related Tools */}
+        <div className="max-w-4xl mx-auto my-8">
+          <RelatedTools currentTool="bmi-calculator" />
         </div>
         
         {/* SEO Content */}
